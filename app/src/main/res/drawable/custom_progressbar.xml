@@ -1,0 +1,22 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 배경 -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="#E0E0E0" />
+        </shape>
+    </item>
+
+    <!-- 채워지는 부분 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="16dp" />
+                <gradient
+                    android:startColor="#A5D6A7"
+                    android:endColor="#2E7D32"
+                    android:angle="0" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

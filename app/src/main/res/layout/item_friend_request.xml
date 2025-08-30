@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground">
+    <ImageView
+    android:id="@+id/iv_requester_profile_picture_notif"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:src="@drawable/loginbig" android:scaleType="centerCrop"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.0"/>
+    <TextView
+    android:id="@+id/tv_request_notification_text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:text="[닉네임]님이 친구 요청을 보냈어요." android:textColor="@android:color/black"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toEndOf="@id/iv_requester_profile_picture_notif"
+    app:layout_constraintTop_toTopOf="@id/iv_requester_profile_picture_notif"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/layout_action_buttons"
+    app:layout_constraintVertical_chainStyle="packed"/>
+    <LinearLayout
+    android:id="@+id/layout_action_buttons"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="end" android:layout_marginTop="8dp"
+    app:layout_constraintStart_toStartOf="@id/tv_request_notification_text"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_request_notification_text"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <Button
+        android:id="@+id/buttonRemoveRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="삭제"
+        android:textSize="16sp"
+        android:backgroundTint="#CDEEF7"
+        android:textColor="#000000"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/buttonAddRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수락"
+        android:textSize="16sp"
+        android:backgroundTint="#CDEEF7"
+        android:textColor="#000000"
+        android:layout_marginStart="16dp"/>
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF9FF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:gravity="center_horizontal">
+
+        <!-- 🌤️ 날씨 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/weatherLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="@drawable/bg_rounded_white"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/weatherIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="날씨 아이콘"
+                android:src="@drawable/ic_weather_default" />
+
+            <TextView
+                android:id="@+id/weatherText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날씨 정보를 불러오는 중..."
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- 🌳 나무 애니메이션 2개를 가로 정렬 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:orientation="horizontal"
+            android:background="@drawable/ice_background"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/tree_image1"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+
+                app:lottie_rawRes="@raw/bouncing_egg_lottie_fixed"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+
+        </LinearLayout>
+
+        <!-- 🌿 텍스트 타이틀 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="펭귄 상태"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2C8A35"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp" />
+
+        <!-- 레벨 -->
+        <TextView
+            android:id="@+id/textLevelInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lv.1"
+            android:textSize="15sp"
+            android:textColor="#388E3C"
+            android:layout_marginBottom="2dp" />
+
+        <!-- 포인트 -->
+        <TextView
+            android:id="@+id/textPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보유 포인트: 0P"
+            android:textSize="14sp"
+            android:textColor="#00796B"
+            android:layout_marginBottom="0dp" />
+
+        <!-- EXP Progress Layout -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/expLottie"
+            android:layout_width="500dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            app:lottie_rawRes="@raw/exp_progress"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false" />
+
+        <!-- 체크리스트 카드 뷰 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#CDEEF7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center"
+                app:cardBackgroundColor="#A7E3F0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="✅ 오늘의 체크리스트 ✅"
+                    android:textColor="#333333"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/checklistContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp" />
+
+                <!-- 체크리스트 수정 버튼 -->
+                <ImageButton
+                    android:id="@+id/btn_edit_checklist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="체크리스트 수정"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_add" />
+
+                <!-- 체크 현황 -->
+                <TextView
+                    android:id="@+id/textCheckStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="오늘 체크: 0/6"
+                    android:textColor="#4CAF50"
+                    android:textSize="14sp" />
+
+                <!-- 진행 게이지 -->
+                <LinearLayout
+                    android:id="@+id/leafProgressLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

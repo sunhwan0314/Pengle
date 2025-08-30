@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF9FF">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99D0FF"
+        app:tabIndicatorColor="#4169E1"
+        app:tabSelectedTextColor="#003366"
+        app:tabTextColor="#003366" />  <!-- 선택 안된 탭 텍스트 색상: 중간 녹색 -->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="398dp"
+        android:layout_height="633dp"
+        android:background="#EAF9FF"/>
+</LinearLayout>

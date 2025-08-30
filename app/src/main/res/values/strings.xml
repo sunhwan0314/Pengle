@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">에코온</string>
+    <string name="checklist">체크리스트</string>
+    <string name="add_checklist">체크리스트 추가</string>
+    <string name="my_tree_status">내 나무 상태</string>
+    <string name="today_check">오늘 체크: 0/3</string>
+    <string name="tree_growing">🌱 새싹이 건강하게 자라고 있어요!</string>
+    <string name="point_own">보유 포인트:</string>
+    <string name="next_water_time">다음 물주기까지 남은 시간:</string>
+    <string name="default_web_client_id">1089101706648-rroiagiuquj93teo2qhl56gpk02895df.apps.googleusercontent.com</string>
+</resources>
