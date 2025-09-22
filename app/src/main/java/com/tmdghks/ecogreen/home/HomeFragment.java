@@ -53,7 +53,7 @@ public class HomeFragment extends Fragment {
     private FirebaseAuth mAuth; // Firebase Authentication 인스턴스
 
     private static final int LOCATION_PERMISSION_CODE = 1001;
-    private final String API_KEY = "c4fcb9e7e15778489c59240fc7a7daa3";
+    
 
     private TextView textPoint, textCheckStatus, textLevelInfo;
     private ProgressBar progressBar;
